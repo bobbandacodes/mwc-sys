@@ -1,0 +1,89 @@
+/* Specific Login Page Styles */
+.login-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.login-content {
+    max-width: 600px;
+    width: 100%;
+}
+
+.login-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-login {
+    padding: 0.75rem 2rem;
+    background: linear-gradient(135deg, #85C1E9, #5DADE2); 
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    width: 48%;  /* Make buttons side by side */
+    text-align: center;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #5DADE2, #85C1E9);
+}
+
+.hr {
+    background: linear-gradient(135deg, #F1C40F, #F39C12); 
+}
+
+.supervisor {
+    background: linear-gradient(135deg, #27AE60, #2ECC71); 
+}
+
+/* Specific Registration Page Styles */
+.register-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.register-content {
+    max-width: 400px;
+    width: 100%;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.register-form input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #85C1E9, #5DADE2); /* Soft blue gradient */
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #5DADE2, #85C1E9);
+}
+
