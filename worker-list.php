@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 $current_supervisor_id = $_SESSION['supervisor_id'] ?? null; // Get supervisor_id if set in session
@@ -21,6 +22,12 @@ if (isset($_POST['search'])) {
     $sql = "SELECT id, firstname, surname, phone, place, supervisor_id FROM workers WHERE firstname LIKE '%$search%' OR surname LIKE '%$search%'";
 }
 $result = $conn->query($sql);
+
+if (isset($_SESSION['message'])) {
+    echo "<div class='message'>" . $_SESSION['message'] . "</div>";
+    unset($_SESSION['message']); // Clear the message after displaying it
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +78,7 @@ $result = $conn->query($sql);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
+                <?php
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             $workerName = htmlspecialchars($row['firstname']) . " " . htmlspecialchars($row['surname']);
@@ -81,9 +88,9 @@ $result = $conn->query($sql);
                             echo "<td>" . htmlspecialchars($row['place']) . "</td>";
                             echo "<td>" . htmlspecialchars($row['phone']) . "</td>";
                             echo "<td class='action-buttons'>";
-                            echo "<a href='rate-worker.php?worker_id=" . $row['id'] . "' class='btn rate-btn'>Rate</a>";
-                            echo "<a href='edit-worker.php?id=" . $row['id'] . "' class='btn edit-btn'>Edit</a>"; // Green edit button
-                            echo "<a href='delete-worker.php?id=" . $row['id'] . "' class='btn delete-btn' onclick='return confirm(\"Are you sure you want to delete this worker?\");'>Delete</a>";
+                            echo "<a href='worker-rate.php?worker_id=" . $row['id'] . "' class='btn rate-btn'>Rate</a>";
+                            echo "<a href='worker-edit.php?id=" . $row['id'] . "' class='btn edit-btn'>Edit</a>"; // Updated Edit button
+                            echo "<a href='worker-delete.php?id=" . $row['id'] . "' class='btn delete-btn' onclick='return confirm(\"Are you sure you want to delete this worker?\");'>Delete</a>";
                             echo "</td>";
                             echo "</tr>";
                         }
@@ -91,6 +98,7 @@ $result = $conn->query($sql);
                         echo "<tr><td colspan='5'>No workers found</td></tr>";
                     }
                     ?>
+
                 </tbody>
             </table>
         </div>
@@ -103,5 +111,16 @@ $result = $conn->query($sql);
         const sidebar = document.getElementById("sidebar");
         sidebar.classList.toggle("active");
     }
+
+
+    // Automatically remove the message div after animation ends
+    setTimeout(() => {
+        const messageDiv = document.querySelector('.message');
+        if (messageDiv) {
+            messageDiv.style.display = 'none';
+        }
+    }, 5000); // 5 seconds (same as animation duration)
+</script>
+
 </script>
 </html>

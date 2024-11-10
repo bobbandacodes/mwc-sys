@@ -12,7 +12,7 @@
   <!-- Header with Navbar -->
   <header>
     <nav class="navbar">
-      <img src="logo.png" alt="Logo" class="logo">
+      <a href="index.php"><img src="img/mwc-logo.png" alt="Logo" class="logo"></a>
       <ul class="nav-links">
         <li><a href="login.php">Logout</a></li>
         <li><a href="policy.php">Policy</a></li>
@@ -38,7 +38,7 @@
         <h3>Add Worker</h3>
         <p>Register new workers into the system.</p>
       </div>
-      <div class="card" onclick="window.location.href='rate-worker.php'">
+      <div class="card" onclick="window.location.href='worker-rate.php'">
         <h3>Rate Worker</h3>
         <p>Evaluate and rate workers' performance.</p>
       </div>

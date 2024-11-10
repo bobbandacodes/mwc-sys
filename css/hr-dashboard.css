@@ -1,0 +1,70 @@
+/* Maroon gradient background */
+.background-gradient {
+  background: linear-gradient(to right, #8B0000, #800000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  width: 90%;
+  max-width: 1200px;
+  color: white;
+  text-align: center;
+}
+
+/* Header for welcome text */
+.dashboard-container h1 {
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Card grid styling */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Individual card styling */
+.dashboard-card {
+  background-color: #ffffff;
+  color: #800000;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Card title and description */
+.dashboard-card h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p {
+  margin-bottom: 15px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* Button styling */
+.dashboard-card button {
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard-card button:hover {
+  background-color: #800000;
+}

@@ -12,7 +12,7 @@
   <!-- Header with Navbar -->
   <header>
     <nav class="navbar">
-      <img src="img/mwc-logo.png" alt="Logo" class="logo">
+      <a href="index.php"><img src="img/mwc-logo.png" alt="Logo" class="logo"></a>
       <ul class="nav-links">
         <li><a href="supervisor-dashboard.php">Dashboard</a></li>
         <li><a href="policy.php">Policy</a></li>

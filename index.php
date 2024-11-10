@@ -11,7 +11,7 @@
   <!-- Navigation Bar -->
   <header>
     <nav class="navbar">
-      <img src="img/mwc-logo.png" alt="Logo" class="logo">
+    <a href="index.php"><img src="img/mwc-logo.png" alt="Logo" class="logo"></a>
       <ul class="nav-links">
         <li><a href="register.php">Register</a></li>
         <li><a href="login.php">Login</a></li>

@@ -1,0 +1,79 @@
+/* Maroon gradient background */
+.background-gradient {
+    background: linear-gradient(to right, #8B0000, #800000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 60px; /* Offset for fixed header */
+    padding-bottom: 40px; /* Offset for fixed footer */
+    box-sizing: border-box;
+}
+
+/* Header with fixed position */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer with fixed position */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: #800000;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form container */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Form input fields */
+form label {
+    display: block;
+    color: #800000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #800000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: #800000;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #800000;
+}

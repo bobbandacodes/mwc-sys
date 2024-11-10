@@ -1,0 +1,48 @@
+/* register.css (apply similar styles for login.css) */
+.register-section, .login-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.register-content, .login-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-content h1, .login-content h1 {
+    color: maroon;
+    margin-bottom: 20px;
+}
+
+.register-form input, .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: maroon;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #a30000;
+}
