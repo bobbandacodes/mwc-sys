@@ -293,3 +293,17 @@ header h2 {
         transform: translateY(-20px); /* Fade out and slide up */
     }
 }
+
+.track-btn {
+    background-color: blue; /* Customize color */
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.track-btn:hover {
+    background-color: darkblue; /* Hover effect */
+}
+

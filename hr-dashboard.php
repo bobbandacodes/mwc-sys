@@ -70,13 +70,6 @@ $worker_count = $worker_count_result->fetch_assoc()['count'];
           <button onclick="window.location.href='supervisors.php'">View Supervisors</button>
         </div>
 
-        <!-- Departments Card -->
-        <div class="dashboard-card">
-          <h2>Departments</h2>
-          <p>Organize and manage department details.</p>
-          <button onclick="window.location.href='departments.php'">View Departments</button>
-        </div>
-
         <!-- Track Performance Card -->
         <div class="dashboard-card">
           <h2>Track Performance</h2>
@@ -91,11 +84,6 @@ $worker_count = $worker_count_result->fetch_assoc()['count'];
           <button onclick="window.location.href='reports.php'">View Reports</button>
         </div>
 
-        <!-- Additional Card -->
-        <div class="dashboard-card">
-          <h2>Analytics</h2>
-          <p>Analyze data insights on workforce trends.</p>
-          <button onclick="window.location.href='analytics.php'">View Analytics</button>
         </div>
       </div>
     </div>

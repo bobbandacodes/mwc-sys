@@ -1,8 +1,9 @@
 /* Style the table */
 table {
-    width: 100%;
+    margin: 20%;
+    width: 60%; /* Set table width to 60% */
+    margin: 20px auto; /* Center the table */
     border-collapse: collapse;
-    margin: 20px 0;
 }
 
 table th, table td {
@@ -26,7 +27,7 @@ table tr:hover {
 
 /* Page Title */
 h1 {
-    color: #8B0000;
+    color: white; /* Change heading color to white */
     text-align: center;
     margin-bottom: 20px;
 }

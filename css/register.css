@@ -65,25 +65,27 @@
     gap: 1rem;
 }
 
-.register-form input {
+.register-form input, 
+.register-form button {
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
 }
 
-.btn-submit {
-    padding: 0.75rem;
+.register-form button {
     background: linear-gradient(135deg, #85C1E9, #5DADE2); /* Soft blue gradient */
     color: #fff;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.btn-submit:hover {
+.register-form button:hover {
     background: linear-gradient(135deg, #5DADE2, #85C1E9);
 }
 
+.register-form div {
+    text-align: left;
+}

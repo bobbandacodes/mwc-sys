@@ -11,18 +11,18 @@
 
   <header>
     <nav class="navbar">
-    <a href="index.php"><img src="img/mwc-logo.png" alt="Logo" class="logo"></a>
-    <ul class="nav-links">
-        <li><a href="login.php">Login</a></li>
-        <li><a href="policy.php">Policy</a></li>
-        <li><a href="about.php">About</a></li>
-      </ul>
-      <div class="hamburger-menu" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+      <a href="index.php"><img src="img/mwc-logo.png" alt="Logo" class="logo"></a>
+      <ul class="nav-links">
+          <li><a href="login.php">Login</a></li>
+          <li><a href="policy.php">Policy</a></li>
+          <li><a href="about.php">About</a></li>
+        </ul>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
   </header>
 
   <main class="register-section">
@@ -35,6 +35,20 @@
         <input type="password" name="password" placeholder="Password" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}" title="Must contain at least 8 characters, including letters and numbers.">
         <input type="password" name="confirm_password" placeholder="Confirm Password" required>
         <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <!-- Department radio buttons -->
+        <div>
+          <p>Select Department:</p>
+          <label>
+            <input type="radio" name="department" value="Landscaping" required>
+            Landscaping
+          </label>
+          <label>
+            <input type="radio" name="department" value="Window Cleaning">
+            Window Cleaning
+          </label>
+        </div>
+
         <button type="submit" name="register_supervisor" class="btn-submit">Register</button>
       </form>
     </div>
@@ -66,6 +80,7 @@
       $last_name = htmlspecialchars($_POST['last_name']);
       $email = htmlspecialchars($_POST['email']);
       $phone = htmlspecialchars($_POST['phone']);
+      $department = htmlspecialchars($_POST['department']);
 
       // Ensure password and confirm password match
       if ($_POST['password'] !== $_POST['confirm_password']) {
@@ -75,7 +90,7 @@
           $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
           // Insert query
-          $sql = "INSERT INTO supervisors (first_name, last_name, email, password, phone) VALUES ('$first_name', '$last_name', '$email', '$password', '$phone')";
+          $sql = "INSERT INTO supervisors (first_name, last_name, email, password, phone, department) VALUES ('$first_name', '$last_name', '$email', '$password', '$phone', '$department')";
 
           if ($conn->query($sql) === TRUE) {
               // Redirect to Supervisor dashboard on successful registration

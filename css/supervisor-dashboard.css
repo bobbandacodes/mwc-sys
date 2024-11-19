@@ -1,0 +1,152 @@
+/* Supervisor Dashboard Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #800000, #4b0000);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+}
+
+.logo {
+    width: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #800000;
+}
+
+/* Dashboard Main Section */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    flex: 1;
+}
+
+.dashboard .content {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard .content h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard .content p {
+    font-size: 1.2rem;
+    color: #f2f2f2;
+}
+
+/* Cards Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+/* Individual Card Styling */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #800000;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Card Button */
+.card button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #9b0000, #d60000); /* Soft blue gradient */
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: linear-gradient(135deg, #d60000, #9b0000);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard .content h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard .content p {
+        font-size: 1rem;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    color: #800000;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}

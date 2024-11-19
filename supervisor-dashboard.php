@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Supervisor Dashboard - MWC RECORD-KEEPING SYSTEM</title>
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/dashboard.css"> <!-- Custom styles for the dashboard -->
+  <link rel="stylesheet" href="css/supervisor-dashboard.css"> 
 </head>
 <body>
 
-  <!-- Header with Navbar -->
   <header>
     <nav class="navbar">
       <a href="index.php"><img src="img/mwc-logo.png" alt="Logo" class="logo"></a>
@@ -26,7 +25,7 @@
     </nav>
   </header>
 
-  <!-- Main content with cards aligned to the right -->
+  <!-- Main content with cards -->
   <main class="dashboard">
     <div class="content">
       <h1>Welcome to the Supervisor Dashboard</h1>
@@ -34,17 +33,20 @@
     </div>
 
     <div class="card-container">
-      <div class="card" onclick="window.location.href='add-worker.php'">
+      <div class="card">
         <h3>Add Worker</h3>
-        <p>Register new workers into the system.</p>
+        <p>Register new temporary workers.</p>
+        <button onclick="window.location.href='add-worker.php'">Add</button>
       </div>
-      <div class="card" onclick="window.location.href='worker-rate.php'">
-        <h3>Rate Worker</h3>
-        <p>Evaluate and rate workers' performance.</p>
+      <div class="card">
+        <h3>View Workers</h3>
+        <p>Modify and evalute workers' performance.</p>
+        <button onclick="window.location.href='worker-list.php'">View</button>
       </div>
-      <div class="card" onclick="window.location.href='generate-reports.php'">
+      <div class="card">
         <h3>Generate Reports</h3>
-        <p>View reports on worker performance and other metrics.</p>
+        <p>View reports on worker performance.</p>
+        <button onclick="window.location.href='generate-reports.php'">Generate</button>
       </div>
     </div>
   </main>

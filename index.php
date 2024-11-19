@@ -15,8 +15,8 @@
       <ul class="nav-links">
         <li><a href="register.php">Register</a></li>
         <li><a href="login.php">Login</a></li>
-        <li><a href="policy.php">Policy</a></li>
         <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
       </ul>
       <div class="hamburger-menu" onclick="toggleMenu()">
         <span></span>
@@ -30,8 +30,8 @@
   <main class="hero-section">
     <div class="hero-content">
       <h1>MWC Record-Keeping System</h1>
-      <p>Easy for Supervisor, nice for HR</p>
-      <a href="#" class="btn-get-started">Get Started</a>
+      <p>For Managing and Performance Tracking of Temporary Workers</p>
+      <a href="register.php" class="btn-get-started">Get Started</a>
     </div>
   </main>
 

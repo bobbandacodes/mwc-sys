@@ -1,26 +1,28 @@
 <?php
 session_start();
 
-// Database connection
+// Define database connection variables
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "mwc";
 
+// Create a new database connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Check for connection errors
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
 // Query to get all supervisors and the number of workers under them
-$query = "SELECT s.id, s.first_name, s.department, COUNT(w.id) AS num_workers 
+$query = "SELECT s.id, CONCAT(s.first_name, ' ', s.last_name) AS name, COUNT(w.id) AS num_workers 
           FROM supervisors s 
           LEFT JOIN workers w ON s.id = w.supervisor_id
           GROUP BY s.id";
 $result = $conn->query($query);
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +60,6 @@ $result = $conn->query($query);
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Department</th>
                     <th>Number of Workers</th>
                 </tr>
             </thead>
@@ -69,12 +70,11 @@ $result = $conn->query($query);
                         echo "<tr>";
                         echo "<td>" . $row['id'] . "</td>";
                         echo "<td>" . $row['name'] . "</td>";
-                        echo "<td>" . $row['department'] . "</td>";
                         echo "<td>" . $row['num_workers'] . "</td>";
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='4'>No supervisors found</td></tr>";
+                    echo "<tr><td colspan='3'>No supervisors found</td></tr>";
                 }
                 ?>
             </tbody>

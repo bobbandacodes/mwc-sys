@@ -15,8 +15,9 @@
     <a href="index.php"><img src="img/mwc-logo.png" alt="Logo" class="logo"></a>
       <ul class="nav-links">
         <li><a href="login.php">Login</a></li>
-        <li><a href="policy.php">Policy</a></li>
         <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
+
       </ul>
       <div class="hamburger-menu" onclick="toggleMenu()">
         <span></span>
